@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Krishna Kumar | Portfolio</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+<body>
+
+<div class="bg-animation"></div>
+
+<nav>
+<h2 class="logo">Krishna.info</h2>
+
+<ul>
+<li class="baar"><a href="#home">Home</a></li>
+<li class="baar"><a href="#about">About</a></li>
+<li class="baar"><a href="#skills">Skills</a></li>
+<li class="baar"><a href="#projects">Projects</a></li>
+<li class="baar"><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+
+<section id="home" class="hero">
+
+<div class="hero-text">
+<h1>Hi, I'm <span>Krishna Kumar</span></h1>
+
+<h2><span id="typing"></span></h2>
+
+<p>
+Creative Frontend Developer building modern
+and interactive web experiences.
+</p>
+
+<a href="#projects" class="btn">View Work</a>
+</div>
+
+<div class="hero-image">
+<img src="Screenshot 2026-06-21 at 1.19.54 PM.png" alt="Profile">
+
+</div>
+
+</section>
+<!-- <div class="about"> -->
+<section id="about">
+<h2 class="title">About Me</h2>
+
+<p class="about-text">
+I am Krishna Kumar, a B.Tech student in Electric Vehicle and Energy Engineering. I have knowledge of C programming and am learning web development, DSA, and Arduino. I enjoy building projects, exploring EV technologies, and continuously improving my technical skills. I am a hardworking and motivated learner aiming to build a successful career in technology and engineering.
+</p>
+<!-- </div> -->
+</section>
+<section id="skills">
+
+<h2 class="title">Skills</h2>
+
+<div class="skill-grid">
+
+<div class="skill-card">HTML</div>
+<div class="skill-card">CSS</div>
+<div class="skill-card">JavaScript</div>
+<div class="skill-card">C/C++ programming</div>
+<!-- <div class="skill-card">Node.js</div> -->
+<!-- <div class="skill-card"></div> -->
+
+</div>
+
+</section>
+
+<section id="projects">
+
+<h2 class="title">Projects</h2>
+
+<div class="project-grid">
+
+<div class="project-card">
+<h3>Currency Converter</h3>
+<p>Real-time API Currency Converter.</p>
+</div>
+
+<div class="project-card">
+<h3>Scientific Calculator</h3>
+<p>Advanced futuristic calculator.</p>
+</div>
+
+<div class="project-card">
+<h3>E-Commerce Website</h3>
+<p>Modern online shopping platform.</p>
+</div>
+
+<div class="project-card">
+<h3>QR Code generator</h3>
+<p>generat QR Code to text and URL.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="contact">
+
+<h2 class="title">Contact Me</h2>
+
+<form name="submit-to-google-sheet">
+
+<input type="text" name="Name" placeholder="Name" required>
+
+<input type="email" name="Email" placeholder="Email" required>
+
+<textarea name="Massage" placeholder="Message"></textarea>
+
+<button type="submit">Send</button>
+
+</form>
+
+<div class="social">
+
+<a href="https://github.com/krishnakumar96168810-ship-it"><i class="fab fa-github"></i></a>
+<a href="https://www.linkedin.com/in/krishna-kumar-114864381?utm_source=share_via&utm_content=profile&utm_medium=member_android"><i class="fab fa-linkedin"></i></a>
+<a href="https://www.instagram.com/krishna_the__________9t?igsh=OHUyb2hlcG1odmgy"><i class="fab fa-instagram"></i></a>
+<a href="https://x.com/krishnakumarao"><i class="fab fa-twitter"></i></a>
+</div>
+
+</section>
+
+<script src="script.js"></script>
+<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbyuHZPY-fL1-OGjLw0zRzwaY0upk3Jip-cmzjokz7T0jEZbYthqJMb0ycknQQicHnLZ/exec'
+  const form = document.forms['submit-to-google-sheet']
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+
+    fetch(scriptURL, {
+      method: 'POST',
+      body: new FormData(form)
+    })
+      .then(response => console.log('Success!', response))
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
+</body>
+</html>
